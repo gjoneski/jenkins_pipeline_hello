@@ -1,1 +1,1 @@
-var hash = "test"
+var hash = "__COMMIT_HASH_PLACEHOLDER__"
