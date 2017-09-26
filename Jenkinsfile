@@ -2,7 +2,7 @@
 
 node {
   def testVar = "test"
-  def hash = env.GIT_COMMIT
+  def hash = sh(returnStdout: true, script: "git log -n 1 --pretty=format:'%h'").trim()
   stage('Stage 1') {
     echo "Hello ${testVar}"
     echo "Hello ${hash}"
