@@ -1,7 +1,9 @@
 #!groovy
 
 node {
+  def testVar = "test"
   stage('Stage 1') {
+    echo "Hello ${testVar}"
     echo "Hello World 1"
     checkout scm
     sh "git rev-parse HEAD > commit"
